@@ -8,3 +8,8 @@ Date: June 30, 2026
 
 import pathlib
 import string
+
+
+class WordAnalyzer:
+    def __init__(self, filepath):
+        pass
