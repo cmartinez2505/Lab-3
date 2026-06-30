@@ -15,5 +15,17 @@ class WordAnalyzer:
         self._filepath = pathlib.Path(filepath)
         self._frequencies = {}
 
-        
-    
+    def process_file(self):
+        try:
+
+
+
+
+
+
+        except FileNotFoundError:
+            return False
+
+ 
+
+
