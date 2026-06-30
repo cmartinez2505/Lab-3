@@ -17,6 +17,15 @@ class WordAnalyzer:
 
     def process_file(self):
         try:
+            if not self._filepath.exists():
+                return False
+            
+            with self._filepath.open(self._filepath) as file:
+                for line in file:
+                    
+
+            
+    
             
 
 
