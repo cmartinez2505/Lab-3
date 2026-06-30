@@ -5,3 +5,6 @@ Purpose: This is a OOP Program that is used to count word frequencies in the tex
 Starter Code: No starter code used
 Date: June 30, 2026
 """
+
+import pathlib
+import string
