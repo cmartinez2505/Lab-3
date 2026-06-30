@@ -25,7 +25,11 @@ class WordAnalyzer:
 
                     no_punctuation = str.maketrans("", "", string.punctuation)
 
+                    no_line = line.translate(no_punctuation)
+
                     
+
+
 
 
             
