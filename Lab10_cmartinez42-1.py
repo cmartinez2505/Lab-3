@@ -27,7 +27,9 @@ class WordAnalyzer:
 
                     no_line = line.translate(no_punctuation)
 
-                    
+                    lowercase_line = no_line.lower()
+
+
 
 
 
