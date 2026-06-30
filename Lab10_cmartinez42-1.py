@@ -22,7 +22,11 @@ class WordAnalyzer:
             
             with self._filepath.open(self._filepath) as file:
                 for line in file:
+
+                    no_punctuation = str.maketrans("", "", string.punctuation)
+
                     
+
 
             
     
