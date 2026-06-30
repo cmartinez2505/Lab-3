@@ -29,20 +29,17 @@ class WordAnalyzer:
 
                     lowercase_line = no_line.lower()
 
+                    words = lowercase_line.split()
 
 
+                    for word in words:
+                        if word in self._frequencies:
+                            self._frequencies[word] = self._frequencies[word] +1
 
+                        else:
+                            self._frequencies[word] = 1
 
-
-            
-    
-            
-
-
-
-
-
-
+            return True                
 
         except FileNotFoundError:
             return False
