@@ -19,11 +19,11 @@ class WordAnalyzer:
         try:
             if not self._filepath.exists():
                 return False
+         
+            no_punctuation = str.maketrans("", "", string.punctuation)
             
-            with self._filepath.open(self._filepath) as file:
+            with self._filepath.open("r", encoding="utf-8") as file:
                 for line in file:
-
-                    no_punctuation = str.maketrans("", "", string.punctuation)
 
                     no_line = line.translate(no_punctuation)
 
@@ -49,7 +49,7 @@ class WordAnalyzer:
 
         for word in sorted_words:
             count = self._frequencies[word]
-            print(f"{word}: {count}")
+            print(f"{word} :: {count}")
 
  
 
@@ -77,20 +77,23 @@ def main():
             print("\nGoodbye!")
             break
 
-    if choice in files_menu:
-        selected_choice = files_menu[choice]
-        print(f"\nProcessing '{selected_choice.name}'...\n")
-        analyzer = WordAnalyzer(selected_choice)
+        if choice in files_menu:
+            selected_choice = files_menu[choice]
 
-        if analyzer.process_file():
-            analyzer.print_report()
+        
+            print(f"\nProcessing '{selected_choice.name}'...\n")
+            analyzer = WordAnalyzer(selected_choice)
+
+            if analyzer.process_file():
+                analyzer.print_report()
+            else:
+                 print(f"Error: The file {selected_choice.name} could not be found.")    
+
+            input("\nPress return to return to the menu... ")
+        
         else:
-            print(f"Error: The file {selected_choice.name} could not be found.")    
-
-            input("\nPress enter to return to the menu... ")
-    else:
-        print("\nInvalid choice. Please select from 1-5.")     
-        input("\nPress enter to return to the menu... ")   
+             print("\nInvalid choice. Please select from 1-5.")     
+             input("\nPress enter to return to the menu... ")   
 
 if __name__ == "__main__":
     main()
