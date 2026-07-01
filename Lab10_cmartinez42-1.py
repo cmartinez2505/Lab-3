@@ -77,5 +77,10 @@ def main():
             print("\nGoodbye!")
             break
 
+    if choice in files_menu:
+        selected_choice = files_menu[choice]
+        print(f"\nProcessing '{selected_choice.name}'...\n")
+        analyzer = WordAnalyzer(selected_choice)
+
 
 
