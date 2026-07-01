@@ -17,6 +17,10 @@ class WordAnalyzer:
 
 
     def __init__(self, filepath):
+
+        """
+        This function takes the file that the user entered though the parameter and saves it and makes a empty dictionary.
+        """
         self._filepath = pathlib.Path(filepath)
         self._frequencies = {}
 
