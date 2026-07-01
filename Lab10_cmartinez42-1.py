@@ -92,6 +92,5 @@ def main():
         print("\nInvalid choice. Please select from 1-5.")     
         input("\nPress enter to return to the menu... ")   
 
-
-
-
+if __name__ == "__main__":
+    main()
