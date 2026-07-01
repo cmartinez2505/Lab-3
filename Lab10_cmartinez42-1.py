@@ -45,6 +45,9 @@ class WordAnalyzer:
             return False
         
     def print_report(self):
+        """
+        This method takes all the words found, sorts them in alphabetical order, and prints them.
+        """
         sorted_words = sorted(self._frequencies.keys())
 
         for word in sorted_words:
