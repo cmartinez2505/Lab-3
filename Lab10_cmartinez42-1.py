@@ -11,6 +11,11 @@ import string
 
 
 class WordAnalyzer:
+    """
+    This class is used to process the text file and clean the punctuations.
+    """
+
+
     def __init__(self, filepath):
         self._filepath = pathlib.Path(filepath)
         self._frequencies = {}
