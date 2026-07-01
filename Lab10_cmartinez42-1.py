@@ -25,6 +25,10 @@ class WordAnalyzer:
         self._frequencies = {}
 
     def process_file(self):
+
+        """
+        This method checks if the file the user entered exists, opens it, and removes any punctuations, and makes all letters lowercased.
+        """
         try:
             if not self._filepath.exists():
                 return False
