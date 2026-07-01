@@ -82,5 +82,16 @@ def main():
         print(f"\nProcessing '{selected_choice.name}'...\n")
         analyzer = WordAnalyzer(selected_choice)
 
+        if analyzer.process_file():
+            analyzer.print_report()
+        else:
+            print(f"Error: The file {selected_choice.name} could not be found.")    
+
+            input("\nPress enter to return to the menu... ")
+    else:
+        print("\nInvalid choice. Please select from 1-5.")     
+        input("\nPress enter to return to the menu... ")   
+
+
 
 
