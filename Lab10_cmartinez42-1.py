@@ -60,3 +60,22 @@ def main():
         "3": pathlib.Path("monte_cristo.txt"),
         "4": pathlib.Path("Tarzan.txt")
     }
+
+    while True:
+
+        print("\n--- Word Analyzer ---")
+        print("Please select a file to analyze:")
+        print("1. Princess Mars")
+        print("2. Treasure Island")
+        print("3. Monte Cristo")
+        print("4. Tarzan")
+        print("5. Exit")
+
+        choice = input("\nEnter your choice (1-5): ").strip()
+
+        if choice == "5":
+            print("\nGoodbye!")
+            break
+
+
+
