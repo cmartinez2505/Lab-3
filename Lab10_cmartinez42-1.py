@@ -53,4 +53,10 @@ class WordAnalyzer:
 
  
 
-
+def main():
+    files_menu = {
+        "1": pathlib.Path("princess_mars.txt"),
+        "2": pathlib.Path("treasure_island.txt"),
+        "3": pathlib.Path("monte_cristo.txt"),
+        "4": pathlib.Path("Tarzan.txt")
+    }
