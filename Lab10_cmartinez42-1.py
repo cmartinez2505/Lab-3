@@ -54,6 +54,10 @@ class WordAnalyzer:
  
 
 def main():
+    """
+    The main starting point and driver of the program. It displays the front end of the program.
+    
+    """
     files_menu = {
         "1": pathlib.Path("princess_mars.txt"),
         "2": pathlib.Path("treasure_island.txt"),
